@@ -1,0 +1,38 @@
+---
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    page-layout: full
+    toc: false
+---
+
+::: page-header
+# MAJOR THEMES
+:::
+
+::::::::::::::::::::::::: grid
+::::::::::::: {.g-col-12 .g-col-md-6}
+::: theme-pill
+Fluid Mechanics
+:::
+
+::: theme-pill
+Manufacturing
+:::
+
+:::::::::::::
+
+::::::::::::: {.g-col-12 .g-col-md-6}
+::: theme-pill
+Material Science
+:::
+
+::: theme-pill
+Solid Mechanics
+:::
+
+:::::::::::::
+:::::::::::::::::::::::::

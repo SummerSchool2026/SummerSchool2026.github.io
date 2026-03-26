@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+  
+format:
+  html:
+    theme:
+      light: flatly
+    include-before-body: header.html
+    css: styles.css
+    toc: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    theme-toggle: true 
+
+
+
+
+website:
+  title: ""
+
+  
+  page-footer:
+    background: dark
+    foreground: light
+    center: |
+      © COPYRIGHT 2025-26 ALL RIGHTS RESERVED, IIT(ISM) DHANBAD
+
+
+    
+execute:
+  freeze: auto
+
+editor: visual

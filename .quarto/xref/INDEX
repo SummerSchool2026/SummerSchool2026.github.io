@@ -1,0 +1,59 @@
+{
+  "index.qmd": {
+    "index.html": "82b23711"
+  },
+  "about.qmd": {
+    "about.html": "71a3c66e"
+  },
+  "programme.qmd": {
+    "programme.html": "c67facae"
+  },
+  "committees.qmd": {
+    "committees.html": "5dcb6444"
+  },
+  "logistics.qmd": {
+    "logistics.html": "4891e490"
+  },
+  "registration.qmd": {
+    "registration.html": "c3a24bdd"
+  },
+  "sponsorship.qmd": {
+    "sponsorship.html": "fc20b254"
+  },
+  "posters.qmd": {
+    "posters.html": "8cc65700"
+  },
+  "culturals.qmd": {
+    "culturals.html": "4c67ff39"
+  },
+  "resources.qmd": {
+    "resources.html": "9af6b145"
+  },
+  "call-for-papers.qmd": {
+    "call-for-papers.html": "a9474ff3"
+  },
+  "submission.qmd": {
+    "submission.html": "ef67faf5"
+  },
+  "themes.qmd": {
+    "themes.html": "da15f08a"
+  },
+  "speakers.qmd": {
+    "speakers.html": "329bd59a"
+  },
+  "contact.qmd": {
+    "contact.html": "962fb103"
+  },
+  "docs/contact.qmd": {
+    "contact.html": "cf09733e"
+  },
+  "travels.qmd": {
+    "travels.html": "d9429f33"
+  },
+  "callforpapers.qmd": {
+    "callforpapers.html": "b6bcc38a"
+  },
+  "callforposters.qmd": {
+    "callforposters.html": "6e468025"
+  }
+}

@@ -1,0 +1,15 @@
+---
+format:
+  html:
+    theme:
+      light: flatly
+    css: styles.css
+    page-layout: full
+    toc: false
+---
+
+## Keynote Speakers (Tentative)
+
+### Giovanni Stabile
+
+### Francesco Ballarin
