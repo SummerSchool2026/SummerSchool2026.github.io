@@ -10,12 +10,69 @@ format:
 
 ![](images/iit-campus.gif)
 
+::: {.lead .mb-4}
+Join us for an international hybrid workshop and summer school exploring the intersection of physics-based simulation and data-driven methods, organized by the **Department of Mechanical Engineering, IIT(ISM) Dhanbad**.
+:::
+
+## About the Program
+
+This five-day event provides a structured platform to master the growing role of data-driven approaches in mechanical engineering. Through a blend of expert-led lectures, tutorial sessions, and hands-on components, participants will explore the mathematical, computational, and practical applications of modern modeling tools.
+
+**Core Topics Include:** Scientific machine learning, computational mechanics, computational fluid dynamics (CFD), reduced-order modeling, digital twins, and high-fidelity simulations.
+
+------------------------------------------------------------------------
+
+::::: {.grid .mb-5}
+::: {.g-col-12 .g-col-md-6}
+### Program Objectives
+
+-   **Master Fundamentals:** Understand the core foundations of data-driven modeling in mechanical systems.
+-   **Hands-On Training:** Gain practical exposure to scientific machine learning tools and computational workflows.
+-   **Integrate Systems:** Learn to seamlessly combine data with simulation, reduced-order models, and physics-based methods.
+-   **Global Collaboration:** Build a network with students, researchers, faculty, and industry experts for future national and international collaborations.
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### Who Should Attend?
+
+This hybrid event welcomes \~100 national delegates (in-person) and international delegates (online), including: \* Students & Research Scholars \* Post-Doctoral Fellows \* Faculty Members \* Industry Professionals
+
+*Ideal for those interested in the analysis, design, prediction, monitoring, and control of mechanical systems.*
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Key Takeaways & Benefits
+
+::::::::: grid
+:::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3 .bg-light}
+#### 💡 Knowledge & Skills
+
+Develop a working competence in reduced-order modeling, machine learning-assisted simulation, and system identification through targeted lectures and tutorials.
+:::
+::::
+
+:::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3 .bg-light}
+#### 🔬 Research & Academics
+
+Identify emerging research problems at the interface of mechanics and data science. Faculty can update course materials, while scholars can accelerate dissertation work and publications.
+:::
+::::
+
+:::: {.g-col-12 .g-col-md-4}
+::: {.card .h-100 .p-3 .bg-light}
+#### ⚙️ Industry Application
+
+Gain actionable insights into deploying data-driven and machine learning tools for real-world monitoring, system prediction, and engineering decision support.
+:::
+::::
+:::::::::
+
 :::::: grid
 ::: {.g-col-12 .g-col-md-8 .justify-text}
-## About Conference
-
-The 1st International Conference on Vibro-acoustic and Mechano-materials (ICVAM-2026) aims to bring together academicians, researchers, students and scientists to exchange novel and innovative ideas, state-of-the-art methodologies, results, and to discuss recent advancements in the broad fields of Vibration, Acoustics, and Mechanics of Materials.
-
 ## About IIT(ISM) Dhanbad
 
 Established in 1926, IIT(ISM) Dhanbad is located in India’s coking coal belt, 260 km from Kolkata and 150 km from Ranchi. Spanning 393 acres, it offers world class facilities across 17 departments, providing courses in Engineering, Sciences, Management and Humanities. IIT(ISM) Dhanbad has played a vital role in the growth and development of India’s mining, mineral and petroleum sectors. The institute holds a global rank of 20th and a national rank of 1st in Mineral and Mining Engineering (QS-2025) and an NIRF ranking of 15th in Engineering for the year 2024. To know more about IIT(ISM) Dhanbad, kindly visit IIT(ISM) Dhanbad.
