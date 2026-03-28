@@ -714,3 +714,74 @@ h2 {
   line-height: 1.6;
 }
 
+
+
+
+
+.committee-profile-card {
+  background-color: #ffffff;
+  border-radius: 40px 40px 40px 12px; /* Distinctive leaf shape */
+  padding: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.committee-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.profile-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 30px 30px 30px 10px; /* Matches outer shape */
+  margin-bottom: 15px;
+}
+
+.profile-content {
+  padding: 0 10px 10px 10px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.profile-role {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.btn-know-more {
+  background-color: #fca311;
+  color: #ffffff !important;
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-know-more:hover {
+  background-color: #e59005;
+  transform: translateX(3px); /* Subtle slide-right */
+}
+

@@ -183,15 +183,6 @@ Department Overview
 ::::
 :::::
 
-::::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
-:::: {.video-card .card .p-0 .overflow-hidden .border-0 .shadow-sm}
-{{< video https://www.youtube.com/watch?v=kmM5IVVl2lQ aspect-ratio="16x9" >}}
-
-::: {.video-desc .p-3 .text-center .fw-bold .bg-light}
-Visionary Partners
-:::
-::::
-:::::
 
 ::::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
 :::: {.video-card .card .p-0 .overflow-hidden .border-0 .shadow-sm}
