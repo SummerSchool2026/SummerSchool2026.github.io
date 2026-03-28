@@ -1,6 +1,7 @@
 /* =========================================================
-   1. FONT IMPORTS (Cleaned up)
+   1. GLOBAL VARIABLES & FONTS
    ========================================================= */
+   
 /* Playfair Display for Headings (Luxury feel) */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
 /* Lato for Navbar text (Clean, modern) */
@@ -8,48 +9,101 @@
 /*For Body text*/
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+:root {
+  --primary-blue: #003366;
+  --accent-red: #e63946;
+  --accent-yellow: #fca311;
+  --text-dark: #222222;
+  --text-muted: #555555;
+  --bg-light: #fcfcfd;
+}
 
-/* =========================================================
-   2. BASE TYPOGRAPHY
-   ========================================================= */
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
-  color: #000;
-  line-height: 1.6;
+  color: var(--text-dark);
+  line-height: 1.25;
+  /* Minimal, eye-soothing soft background (Pale Ice/Slate) */
+  background: linear-gradient(135deg, #f2f6f8 0%, #e4ecef 100%);
+  background-attachment: fixed;
 }
 
+/* Headings get the luxury serif font, centered, and uppercase */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', serif;
-  font-weight: 700;
+  font-weight: 900;
+  color: #111111;
+  text-align: center;          /* Centers all headings */
+  text-transform: uppercase;   /* Makes all headings capital */
+  letter-spacing: 1px;         /* Adds breathing room for capital letters */
+}
+
+/* =========================================================
+   2. UTILITY CLASSES (Spacing & Alignment)
+   ========================================================= */
+/* Reduced vertical spacing globally */
+.section-spacer {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.justify-text, .justify-text p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.bg-very-light {
+  background-color: transparent; /* Removed solid bg for glass effect */
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem; 
+  color: #000000;
+}
+
+.header-subtitle {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #000000;
 }
 
 
+/* Main Section Titles */
+.section-title {
+  color: var(--primary-blue);
+  text-align: center;
+  font-weight: 700;
+  margin-top: 30px; 
+  margin-bottom: 20px; 
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
 
-/* --- Custom Navbar Styling --- */
-
-
+/* =========================================================
+   3. NAVIGATION BAR
+   ========================================================= */
 .custom-navbar {
-  margin-top: 25px; /* Space between subtitle and menu */
-  margin-bottom: 40px;
-  text-align: center; /* Center the menu items */
+  margin-top: 15px; 
+  margin-bottom: 25px; 
+  text-align: center; 
 }
 
 .nav-list {
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: none; 
   padding: 0;
   margin: 0;
-  display: inline-block; /* Allows centering */
+  display: inline-block; 
 }
 
 .nav-list > li {
-  display: inline-block; /* Makes list horizontal */
-  margin: 0 15px; /* Spacing between items */
-  position: relative; /* Needed for dropdown positioning */
+  display: inline-block; 
+  margin: 0 15px; 
+  position: relative; 
 }
 
 .nav-list > li > a, .dropbtn {
   text-decoration: none;
-  color: #000; /* Dark grey text */
+  color: #000; 
   font-size: 1.05rem;
   font-weight: 500;
   padding-bottom: 5px;
@@ -58,416 +112,284 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-list > li > a:hover, .dropbtn:hover {
-  color: #39E6D8; /* Blue on hover */
-  border-bottom: 2px solid #e63946; /* Red underline effect */
+  color: #39E6D8; 
+  border-bottom: 2px solid var(--accent-red); 
 }
 
-
-/* --- Dropdown CSS --- */
-
-
+/* Dropdown (Glassmorphism applied) */
 .dropdown-content {
-  display: none; /* Hidden by default */
+  display: none; 
   position: absolute;
-  background-color: #fff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
   z-index: 1000;
   text-align: left;
-  border-radius: 4px;
-  top: 100%; /* Positions it right below the "Authors" text */
+  border-radius: 8px;
+  top: 100%; 
   left: 0;
+  overflow: hidden;
 }
 
 .dropdown-content a {
   color: #000;
-  padding: 12px 16px;
+  padding: 10px 16px;
   text-decoration: none;
   display: block;
   font-size: 0.95rem;
+  text-align: left; /* Keep dropdown links left aligned */
+  text-transform: none; /* Keep dropdown links normal case */
 }
 
 .dropdown-content a:hover {
-  background-color: #9EE639;
+  background-color: rgba(158, 230, 57, 0.6);
   color: #000;
 }
-
-
-
-
-/* Show the dropdown on hover */
-
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-
-.header-main-title {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #000000;
+/* =========================================================
+   4. HERO BANNER & BUTTONS
+   ========================================================= */
+.hero-banner-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-top: 1rem;
 }
 
-
-.header-subtitle {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #000000;
+.hero-gif {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.page-header {
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #000000;
+.btn-hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* --- Justify Text Utility --- */
-.justify-text p {
-  text-align: justify;
-  text-justify: inter-word; /* Ensures cleaner spacing between words */
-}
-
-
-
-/* "Important Dates" Sidebar Box */
-
-.date-box {
-  background-color: #F5F5DC;
-  border: 1px solid #000;
-  padding: 15px;
-  margin-top: 20px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  
-  h3 {
-    color: #000;
-    text-align: center;
-    font-size: 1.1rem;
-    margin-top: 0;
-    text-transform: uppercase;
-    padding-bottom: 10px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    
-    li {
-      margin-bottom: 10px;
-      font-size: 1rem;
-      
-      strong {
-        display: block;
-        color: #000;
-      }
-    }
-  }
-}
-
-
-
-/* --- Conference Theme Pills --- */
-
-
-.theme-pill {
-  background-color: #fdf2f0; /* Pale pink/peach color */
-  color: #660000;            /* Dark red text */
-  font-weight: 700;          /* Bold font */
-  font-size: 1.2rem;
-  font-family: "Lato", sans-serif;
-  text-align: center;
-  
-  /* Shape & Spacing */
-  border-radius: 50px;       /* Makes it pill-shaped */
-  padding: 15px 20px;
-  margin-bottom: 20px;       /* Space between rows */
-  width: 100%;               /* Fill the column width */
-  
-  /* Visual Depth */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow */
-  border: 1px solid rgba(0,0,0,0.05);
-  
-  /* Flexbox to vertically center the text if it wraps */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60px;          /* Ensures uniform height */
-  
-  transition: transform 0.2s; /* Smooth hover animation */
-}
-
-/* Optional: Slight pop effect on hover */
-.theme-pill:hover {
+.btn-hover-lift:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-  background-color: #F5FDF0;
+  box-shadow: 0 8px 20px rgba(0, 51, 102, 0.2) !important;
 }
 
+/* =========================================================
+   5. GLASSMORPHISM CARDS (Takeaways, Timelines, Videos)
+   ========================================================= */
+/* Takeaway Cards */
+.takeaway-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-top: 3px solid var(--primary-blue); 
+  border-radius: 12px;
+  padding: 20px 15px; 
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 30, 80, 0.05);
+}
 
+.takeaway-card:hover {
+  box-shadow: 0 12px 40px 0 rgba(0, 30, 80, 0.1);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.65);
+}
 
-
-/* --- Speaker List Styling --- */
-
-/* 1. Style the Main Headings (e.g., "Keynote Speakers") */
-h2 {
-  color: #000; /* Dark red to match your reference images */
+.takeaway-icon {
+  font-size: 1.8rem;
+  line-height: 1;
+  margin-bottom: 10px;
   text-align: center;
-  font-weight: 700;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
-/* 2. Remove default bullet points inside the grid columns */
-.grid ul {
+/* Timeline/Important Dates */
+.timeline-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 30, 80, 0.05);
+  padding: 20px; 
+}
+
+.timeline-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px; 
+  border-left: 2px solid rgba(0, 51, 102, 0.2);
+}
+
+.timeline-list li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+}
+
+.timeline-list li span {
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* Video Cards */
+.video-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;  
+  overflow: hidden;    
+  box-shadow: 0 8px 32px 0 rgba(0, 30, 80, 0.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  height: 100%;        
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.video-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 12px 40px 0 rgba(0, 30, 80, 0.1); 
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.video-desc {
+  padding: 10px; 
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  background: rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================================
+   6. SPEAKERS & COMMITTEE
+   ========================================================= */
+/* Speakers List */
+.speaker-list {
   list-style-type: none;
   padding-left: 0;
   margin: 0;
 }
 
-/* 3. Turn each list item (Speaker) into a "Card" */
-.grid li {
-  background-color: #F5FFFA;
-  border-left: 2px solid #e63946; /* Red accent bar on the left */
-  padding: 15px 20px;
-  margin-bottom: 15px; /* Space between cards */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Soft shadow */
+.speaker-list li {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: 4px solid var(--accent-red); 
+  padding: 12px 15px; 
+  margin-bottom: 12px; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  line-height: 1;
+  line-height: 1.3;
 }
 
-/* 4. Add a hover effect for interactivity */
-.grid li:hover {
-  transform: translateY(-5px); /* Moves up slightly */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Shadow grows */
-  background-color: #fdfdfd;
+.speaker-list li:hover {
+  transform: translateY(-2px); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08); 
+  background: rgba(255, 255, 255, 0.65);
 }
 
-/* 5. Style the Name (Bold text) */
-.grid li strong {
-  display: block; /* Puts the name on its own line above affiliation */
-  color: #003366; /* Deep blue for the name */
+.speaker-list li strong {
+  display: block; 
+  color: var(--primary-blue); 
   font-size: 1.1rem;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
+  font-family: 'Lato', sans-serif;
 }
 
-
-
-
-/* --- The Card Style --- */
-.card-box {
-  background-color: #F4EBE2;
-  padding: 40px;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft shadow */
-  border: 1px solid rgba(0,0,0,0.02);
-  height: 100%; /* Ensures equal height */
-}
-
-.card-header {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-  color: #000;
-  margin-top: 5px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #333;
-  padding-bottom: 10px;
-}
-
-/* --- Left Card Content (Icons) --- */
-.info-item {
+/* Committee Profile Cards */
+.committee-profile-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px 30px 30px 12px; 
+  padding: 10px; 
+  box-shadow: 0 8px 32px 0 rgba(0, 30, 80, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
   display: flex;
-  gap: 15px;
-  margin-bottom: 25px;
-  align-items: center;
+  flex-direction: column;
 }
 
-.icon-circle {
-  width: 40px;
-  height: 40px;
-  background-color: #800000; 
-  border-radius: 50%;
+.committee-profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(0, 30, 80, 0.1);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.profile-img {
+  width: 100%;
+  height: 350px; 
+  object-fit: cover;
+  border-radius: 20px 20px 20px 8px; 
+  margin-bottom: 12px;
+}
+
+.profile-content {
+  padding: 0 8px 8px 8px;
+  flex-grow: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.1rem;
+  flex-direction: column;
 }
 
-.info-item strong {
-  display: block;
-  font-size: 1.1rem;
-  color: #000;
-}
-
-.info-item p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.map-wrapper {
-  border-radius: 5px;
-  opacity: 1.0;
-  border: 3px solid #800000;
-}
-
-/* --- Right Card Content (Form) --- */
-.custom-form input,
-.custom-form textarea {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 10px;
-  margin-top: 6px;
-  background-color: #fff; /* Light grey input background */
-  font-family: inherit;
-  font-size: 0.95rem;
-  transition: box-shadow 0.3s ease;
-}
-
-.custom-form input:focus,
-.custom-form textarea:focus {
-  outline: none;
-  background-color: #fff;
-  box-shadow: 0 0 0 2px #eee; /* Yellow glow on focus */
-}
-
-.submit-btn {
-  width: 100%;
-  padding: 15px;
-  border: none;
-  border-radius: 50px; /* Pill shape button */
-  background-color: #800000; /* Yellow Button */
-  color: white;
+.profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
   font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: transform 0.2s, background-color 0.2s;
+  color: #222;
+  margin-bottom: 4px;
 }
 
-.submit-btn:hover {
-  background-color: #C10B29;
-  transform: translateY(-2px);
+.profile-role {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 12px; 
+  flex-grow: 1;
 }
 
-
-
-/* --- Registration Table Styling --- */
-
-/* 1. Container Styling */
-.fee-table {
-  overflow-x: auto; /* Responsive scrolling on mobile */
-  margin-bottom: 40px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
-}
-
-/* 2. Target the actual Table element */
-.fee-table table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 0;
-  font-size: 1rem;
-  background-color: #ffffff;
-}
-
-/* 3. Header Styling (Deep Blue Background) */
-.fee-table thead tr {
-  background-color: #003366; /* Conference Theme Blue */
-  color: #ffffff;
-  text-align: center;
-}
-
-.fee-table th {
-  padding: 18px 15px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  border: none; /* Removes default borders */
-}
-
-/* 4. Body Row Styling */
-.fee-table tbody tr {
-  border-bottom: 1px solid #eeeeee;
-  transition: all 0.1s ease;
-}
-
-/* Zebra Striping: Every even row gets a light grey background */
-.fee-table tbody tr:nth-of-type(all) {
-  background-color: #f8f9fa;
-}
-
-/* Hover Effect: Row gets slightly darker on mouse over */
-.fee-table tbody tr:hover {
-  background-color: #eef2f7;
-  transform: scale(1.005); /* Subtle pop effect */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-/* 5. Cell Styling */
-.fee-table td {
-  padding: 15px 20px;
-  color: #333;
-  vertical-align: middle;
-}
-
-/* Center align the pricing columns (2nd and 3rd) */
-.fee-table td:nth-child(2),
-.fee-table td:nth-child(3) {
-  text-align: center;
-  font-weight: 500;
-  color: #003366; /* Blue text for prices */
-}
-
-/* Left align the Category column (1st) */
-.fee-table td:first-child {
-  text-align: left;
-  font-weight: 600; /* Bold category names */
-  color: #444;
-  border-left: 5px solid transparent; /* invisible border for hover effect */
-}
-
-
-
-
-
-/* --- Video Card Styling --- */
-
-/* The container for the video and text */
-.video-card {
-  background: #ffffff;
-  border-radius: 12px;       /* Smooth rounded corners */
-  overflow: hidden;          /* Ensures video respects the rounded corners */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soft shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation settings */
-  height: 100%;              /* Ensures cards are same height */
-  border: 1px solid rgba(0,0,0,0.05);
-}
-
-/* Hover Effect: Lifts the card up */
-.video-card:hover {
-  transform: translateY(-8px); /* Moves up 8 pixels */
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15); /* Shadow gets deeper */
-}
-
-/* The Text Description */
-.video-desc {
-  padding: 15px;
-  text-align: center;
+.btn-know-more {
+  background-color: var(--accent-yellow);
+  color: #ffffff !important;
+  padding: 6px 18px; 
+  border-radius: 30px;
   font-weight: 600;
-  color: #333;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #fff;
-  border-top: 1px solid #f0f0f0;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+.btn-know-more:hover {
+  background-color: #e59005;
+  transform: translateX(3px);
+}
 
-
-
+/* =========================================================
+   7. ACCOMMODATION & TRAVEL
+   ========================================================= */
 /* --- Travel Section Icons --- */
 .travel-card {
   background: #f8f9fa;
@@ -715,77 +637,281 @@ h2 {
   color: #444;
   line-height: 1.6;
 }
-
-
-
-/* ==========================================================================
-   COMMITTEE PROFILE CARDS (Asymmetrical Clone)
-   ========================================================================== */
-
-.committee-profile-card {
-  background-color: #ffffff;
-  border-radius: 40px 40px 40px 12px; /* Distinctive leaf shape */
-  padding: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+/* =========================================================
+   8. TABLES 
+   ========================================================= */
+/* Registration Table Wrapper */
+.fee-table {
+  overflow-x: auto; 
+  margin-bottom: 30px; 
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(0, 30, 80, 0.05);
 }
 
-.committee-profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
-}
-
-.profile-img {
+.fee-table table {
   width: 100%;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 30px 30px 30px 10px; /* Matches outer shape */
-  margin-bottom: 15px;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.95rem;
+  background-color: transparent;
 }
 
-.profile-content {
-  padding: 0 10px 10px 10px;
-  flex-grow: 1;
+.fee-table thead tr {
+  background: rgba(0, 51, 102, 0.85); 
+  color: #ffffff;
+  text-align: center;
+}
+
+.fee-table th {
+  padding: 12px 15px; 
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: none; 
+}
+
+.fee-table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+
+.fee-table tbody tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.fee-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.fee-table td {
+  padding: 12px 15px; 
+  color: #333;
+  vertical-align: middle;
+}
+
+.fee-table td:nth-child(2),
+.fee-table td:nth-child(3) {
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-blue); 
+}
+
+.fee-table td:first-child {
+  text-align: left;
+  font-weight: 600; 
+  color: #444;
+}
+
+/* =========================================================
+   9. MISCELLANEOUS (Pills & Notes)
+   ========================================================= */
+.theme-pill {
+  background: rgba(253, 242, 240, 0.6); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #660000;            
+  font-weight: 700;          
+  font-size: 1.05rem;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  border-radius: 50px;       
+  padding: 10px 15px; 
+  margin-bottom: 12px; 
+  width: 100%;               
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+  border: 1px solid rgba(255,255,255,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px; 
+  transition: transform 0.2s, background 0.2s; 
+}
+
+.theme-pill:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.hostel-note {
+  border-left: 5px solid var(--accent-yellow) !important; 
+  background: rgba(255, 250, 240, 0.7) !important;
+  backdrop-filter: blur(8px);
+  padding: 15px; 
+  font-size: 1.05rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.8);
+}
+
+
+
+
+
+/* =========================================================
+   10. CONTACT SECTION (Premium Frosted Glass)
+   ========================================================= */
+
+/* The Glass Card Container */
+.card-box {
+  background: rgba(255, 255, 255, 0.55); /* High transparency */
+  backdrop-filter: blur(16px);           /* Strong blur for liquid/frosted effect */
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Sharp, clean edge */
+  border-radius: 16px;
+  padding: 40px 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04); /* Very soft, diffuse shadow */
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-name {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 8px;
+.card-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.7);
 }
 
-.profile-role {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
+/* Card Headings */
+.card-header {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  color: #003366; /* var(--primary-blue) */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 51, 102, 0.1);
+}
+
+/* --- LEFT SIDE: Reach Us --- */
+.contact-info {
+  margin-bottom: 25px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-bottom: 20px;
+}
+
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  background: #003366; /* Deep blue to ground the design */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
+}
+
+.info-item strong {
+  display: block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.info-item p {
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.map-wrapper {
+  margin-top: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  height: 220px;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+/* --- RIGHT SIDE: Form Elements --- */
+.custom-form {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 }
 
-.btn-know-more {
-  background-color: #fca311;
-  color: #ffffff !important;
-  padding: 8px 22px;
-  border-radius: 30px;
-  font-weight: 600;
+/* Liquid/Glass Input Fields */
+.custom-form input,
+.custom-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-color: #003366
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4); /* Semi-transparent inputs */
+  font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  align-self: flex-start;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  color: #222;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02); /* Subtle inner depth */
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-.btn-know-more:hover {
-  background-color: #e59005;
-  transform: translateX(3px); /* Subtle slide-right */
+.custom-form input::placeholder,
+.custom-form textarea::placeholder {
+  color: #777;
+  letter-spacing: 0.5px;
 }
 
+/* Input Focus State (Glow) */
+.custom-form input:focus,
+.custom-form textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.9); /* Turns opaque when typing */
+  border-color: #003366;
+  box-shadow: 0 0 0 4px rgba(0, 51, 102, 0.1);
+}
+
+.custom-form textarea {
+  resize: vertical;
+  border-color: #003366
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #003366;
+  color: #ffffff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.2);
+}
+
+.submit-btn:hover {
+  background: #e63946; /* var(--accent-red) */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+}

@@ -49,15 +49,6 @@ format:
 ```
 :::
 
-
-
 :::
 
 
-
-
-
-
-### Giovanni Stabile
-
-### Francesco Ballarin
