@@ -25,9 +25,13 @@ An international hybrid workshop and summer school exploring the intersection of
 ### Important Dates
 
 <ul class="timeline-list">
+
 <li><strong>15th May, 2026</strong><br> Early Bird Registration Starts</li>
+
 <li><strong>31st May, 2026</strong><br> Registration Deadline</li>
+
 <li><strong>15th June, 2026</strong><br> Abstract for Poster Deadline</li>
+
 </ul>
 :::
 ::::
@@ -36,10 +40,15 @@ An international hybrid workshop and summer school exploring the intersection of
 ## Program Objectives
 
 <ul class="feature-list">
+
 <li><strong>Master Fundamentals:</strong> Understand the core foundations of data-driven modeling in mechanical systems.</li>
+
 <li><strong>Hands-On Training:</strong> Gain practical exposure to scientific machine learning tools and computational workflows.</li>
+
 <li><strong>Integrate Systems:</strong> Learn to seamlessly combine data with simulation, reduced-order models, and physics-based methods.</li>
+
 <li><strong>Global Collaboration:</strong> Build a network with students, researchers, faculty, and industry experts for future national and international collaborations.</li>
+
 </ul>
 :::
 
